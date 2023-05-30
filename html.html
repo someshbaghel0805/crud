@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset= ' UTF-8 ">
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel='stylesheet' href='style.css'>
+  <script src='script.js'></script>
+</head>
+<body>
+  <div class='employee-form'>
+    <form onsubmit='event.preventDefault();onFormSubmit();' autocomplete='off'>
+      <div>
+        <label>Full Name*</label><label class='validation-error hide' id='fullNameValidationError'>This field is
+          required.</label>
+        <input type='text' name='fullname' id='fullname' class='textInput'>
+      </div>
+      <div>
+        <label>Email Id*</label><label id='emailvalidation'></label>
+        <input type='email' name='email' id='email'>
+      </div>
+      <div id='numValue'>0%
+        <select name='status' id='status' onsubmit='onFormSubmit()'>
+          <option value='' type=''>inprogress</option>
+          <option value='' type=''>pending</option>
+          <option value='' type=''>complete</option>
+        </select>
+      </div>
+      <div class='form-action-buttons'>
+        <input type='submit' value='Submit' id='addtaskbtn'>
+        <div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <br />
+  <div class='employees-table'>
+    <table class='list' id='userlist'>
+      <thead>
+        <tr>
+          <th>Full Name</th>
+          <th>Email Id</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id='showlist'>
+      </tbody>
+    </table>
+    <div id='show'>
+    </div>
+  </div>
+</body>
+</html>
